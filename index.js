@@ -3,7 +3,7 @@ const { google } = require("googleapis");
 
 const app = express();
 // GOOGLE_SERVICE_ACCOUNT
-const mySecret = process.env['Token'];
+const mySecret = process.env.TOKEN;
 
 //Redirect to different URL
 //app.get("/", async (req, res) => {
