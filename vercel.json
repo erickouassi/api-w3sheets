@@ -13,6 +13,6 @@
         }
     ],
     "rewrites": [
-    { "source": "/:start/:end", "destination": "/" }
+    { "source": "/:start/:end", "destination": "/:start/:end" }
   ]
 }
