@@ -3,12 +3,12 @@ const { google } = require("googleapis");
 
 const app = express();
 // GOOGLE_SERVICE_ACCOUNT
-const mySecret = process.env['Token'];
+const mySecret = process.env.TOKEN;
 
-//Redirect to different URL
-//app.get("/", async (req, res) => {
-//  res.redirect("https://w3sheets.cf/");
-//});
+Redirect to different URL
+app.get("/", async (req, res) => {
+  res.redirect("https://w3sheets.cf/");
+});
 
 app.get('/', (req, res) => {
 	res.send('API is ACTIVE');
