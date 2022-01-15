@@ -62,6 +62,7 @@ res.send(rows);
 
 app.listen(1337, (req, res) => console.log("running on 1337")); // run nodemon index.js in the terminal: http://127.0.0.1:1337/
 
+// I will add credit or inspiration later.
 // Avoid a single error from crashing the server in production.
 process.on("uncaughtException", (...args) => console.error(args));
 process.on("unhandledRejection", (...args) => console.error(args));
