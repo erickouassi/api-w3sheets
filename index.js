@@ -10,6 +10,10 @@ const mySecret = process.env['Token'];
 //  res.redirect("https://w3sheets.cf/");
 //});
 
+app.get('/', (req, res) => {
+	res.send('API is ACTIVE');
+});
+
 app.get('/:start/:end', async function (req, res) {
 	//console.log("Starting Page: ", req.params['start']);
 	//console.log("Ending Page: ", req.params['end']);
