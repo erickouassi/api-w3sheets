@@ -10,8 +10,15 @@ const mySecret = process.env.TOKEN;
  // res.redirect("https://w3sheets.cf/");
 //});
 
+/*
 app.get('/', (req, res) => {
 	res.send('API is ACTIVE');
+}); */
+
+// CORS header `Access-Control-Allow-Origin` set to accept all
+app.get('/allow-cors', function(req, res) {
+  res.set('Access-Control-Allow-Origin', '*');
+  res.send('API is ACTIVE');
 });
 
 app.get('/:start/:end', async function (req, res) {
