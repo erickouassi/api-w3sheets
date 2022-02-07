@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 // CORS header `Access-Control-Allow-Origin` set to accept all
 app.get('/allow-cors', function(req, res) {
   res.set('Access-Control-Allow-Origin', '*');
-  res.send('API is ACTIVE');
+  res.send('MY API is ACTIVE');
 });
 
 app.get('/:start/:end', async function (req, res) {
