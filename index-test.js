@@ -21,7 +21,7 @@ app.get("/" , async (req, res) => {
 
 
   // Change to your spreadsheet ID
-  const spreadsheetId = "1Edq55XZguetfQquqpETyzXxCVuU7QOpfP1sr8DRXDvw";
+  const spreadsheetId = "1tnyYkbBRb0t0cmg1SZdwZcxWrr_z0M0tYf_WLyi95Pc";
 
   // Get metadata about spreadsheet
   const metaData = await googleSheets.spreadsheets.get({
@@ -32,7 +32,7 @@ app.get("/" , async (req, res) => {
 const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Sheet1", // Change to specific sheet name with the exact name
+    range: "dataApp", // Change to specific sheet name with the exact name
   });
 
 //console.log(getRows.data.values);

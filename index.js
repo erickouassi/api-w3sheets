@@ -1,7 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const { google } = require("googleapis");
-
 const app = express();
+
+
+app.use(cors({
+  origin: 'https://w3sheets.cf/'
+}));
 // GOOGLE_SERVICE_ACCOUNT
 const mySecret = process.env.TOKEN;
 
@@ -10,18 +15,20 @@ const mySecret = process.env.TOKEN;
  // res.redirect("https://w3sheets.cf/");
 //});
 
-
 app.get('/', (req, res) => {
 	res.send('API is ACTIVE');
-}); 
-
-// CORS header `Access-Control-Allow-Origin` set to accept all
-/*app.get('/allow-cors', function(req, res) {
-  res.set('Access-Control-Allow-Origin', '*');
-  res.send('MY API is ACTIVE');
-}); */
+  // Set CORS headers: allow all origins, methods, and headers: you may want to lock this down in a production environment
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET, PUT, PATCH, POST, DELETE");
+    res.header("Access-Control-Allow-Headers", req.header('access-control-request-headers'));
+});
 
 app.get('/:start/:end', async function (req, res) {
+  // Set CORS headers: allow all origins, methods, and headers: you may want to lock this down in a production environment
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET, PUT, PATCH, POST, DELETE");
+    res.header("Access-Control-Allow-Headers", req.header('access-control-request-headers'));
+  
 	//console.log("Starting Page: ", req.params['start']);
 	//console.log("Ending Page: ", req.params['end']);
 
