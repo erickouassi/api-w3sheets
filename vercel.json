@@ -7,6 +7,12 @@
         }
     ],
     
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ],
     "rewrites": [
     { "source": "/:start/:end", "destination": "/:start/:end" }
   ]
